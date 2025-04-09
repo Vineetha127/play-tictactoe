@@ -1,0 +1,119 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image:url('./tic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.parent{
+ width:100vw;
+ height:100vh;
+ background-color:rgba(16, 16, 16, 0.711);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 20px;
+ 
+}
+.game-board{
+  width:300px;
+  height:350px;
+  background-color: rgba(47, 36, 61, 0.277);
+  display:grid;
+  display: flex;
+  flex-direction: column;
+  row-gap:10px;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 20px;
+  border:3px solid rgba(7, 7, 7, 0.197);
+  box-shadow: 0 0 10px rgba(103, 101, 90, 0.458),0 0 20px rgba(60, 56, 61, 0.228);
+} 
+#heading{
+ background:linear-gradient(to right,rgb(193, 39, 19),rgba(8, 236, 31, 0.761),rgb(17, 10, 214));
+ background-clip: text;
+ -webkit-background-clip: text;
+  font-size:40px;
+ -webkit-text-fill-color: transparent;
+ -webkit-text-stroke: 0.3px yellow;
+}
+#tic-tac-toe{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.cell{
+  width:60px;
+  height:55px;
+  background-color: rgba(127, 127, 221, 0.39);
+  border-radius: 10px;
+  border:1px solid blue;
+  color:white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ -webkit-text-stroke: 0.3px rgba(234, 7, 7, 0.866);
+}
+.cell:hover{
+  scale: 0.9;
+}
+@keyframes burst{
+  0%{
+    transform:scale(1);
+    background-color:rgb(16, 164, 228);
+    box-shadow: 0 0 10px yellow;;
+  }
+  50%{
+    transform:scale(1.2);
+    background-color: rgb(176, 208, 15);
+    box-shadow: 0 0 20px rgb(224, 90, 112);
+  }
+  100%{
+    transform:scale(1);
+    background-color: aquamarine;
+    box-shadow: 0 0 10px rgb(57, 243, 57);
+  }
+}
+.winner{
+  width:60px;
+  height:55px;
+  background-color: rgba(177, 236, 16, 0.39);
+  border-radius: 10px;
+  border:1px solid blue;
+  color:white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation:burst 1.6s ease-in-out infinite ;
+
+}
+#btn{
+  width:90px;
+  height:35px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+ color:blue;
+ background-color: rgb(220, 145, 228);
+ outline: none;
+}
+#btn:hover{
+  background-color: rgba(192, 109, 50, 0.729);
+}
+#result{
+  color:aqua;
+  font-size: 21px;
+}
+
+
+
